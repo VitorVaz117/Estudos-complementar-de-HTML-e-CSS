@@ -20,6 +20,8 @@
 
         body{
             background-color: var(--cor4);
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .TamanhoFotoPerfil{
@@ -33,32 +35,33 @@
             width: 35px;
             height: 35px;
             border-radius: 25px;
-            margin-left: 10px;
         }
 
         .containerprincipal{
             max-width: 750px;/*(Responsividade) o containerprincipal para de crescer em 750px*/
             min-height: 400px;/*Mantem a altura minima em 400px*/
-            display: flex;
+            display: flex; /*para colocar os containers lado a lado.*/
+            margin: auto;/*centraliza o conteúdo*/
             border: 1px solid var(--cor3);
-            border-radius: 5px;
+            border-radius: 5px; /*para arredondar as imagens e o container principal.*/
             overflow: hidden; /*como as divs possuem cores de fundo, para que as cores também respeitem os cantos arredondados*/
+
+        }
+
+        .ContainerFotoPerfil{
+            background-color: var(--cor0);
         }
 
         .ContainerRedesSociais{
             background-color: var(--cor0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
 
         .ContainerDescricao{
             background-color: var(--cor0);
-        }
-
-        div img {
-            width: 80%;
-        }
-
-        div > p{
-            padding-left: 5px;
         }
 
         .botoes{
@@ -76,7 +79,16 @@
         }
 
         div > p{
+            margin-top: 10px;
             margin-bottom: 20px;
+        }
+
+        h1{
+            margin-top: 15px;
+        }
+
+        h2{
+            margin-top: 5px;
         }
 
     </style>
@@ -84,20 +96,20 @@
 <body>
 
     <div class="containerprincipal">
-        <div class="ContainerRedesSociais">
+        <div class="ContainerFotoPerfil">
             <img src="imagens/foto perfil.jpg" alt="" class="TamanhoFotoPerfil">
 
-            <div>
-                <img src="imagens/foto perfil.jpg" alt="" class="redessociais">
-                <img src="imagens/foto perfil.jpg" alt="" class="redessociais">
-                <img src="imagens/foto perfil.jpg" alt="" class="redessociais">
-                <img src="imagens/foto perfil.jpg" alt="" class="redessociais">
+            <div class="ContainerRedesSociais">
+                <img src="imagens/icons8-facebook-novo-50.png" alt="" class="redessociais">
+                <img src="imagens/icons8-github-48.png" alt="" class="redessociais">
+                <img src="imagens/icons8-instagram-50.png" alt="" class="redessociais">
+                <img src="imagens/icons8-twitterx-48.png" alt="" class="redessociais">
             </div>
         </div>
         <div class="ContainerDescricao">
             <h1>Vitor Vaz</h1>
+            <h2>Desenvolvedor Web</h2>
             <p>
-                <h2>Desenvolvedor Web</h2>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, voluptatibus sunt, nulla iste ut rerum dolores et atque nam deserunt, earum consectetur dicta vitae magni! Voluptate placeat cum commodi dicta.
             </p>
 
