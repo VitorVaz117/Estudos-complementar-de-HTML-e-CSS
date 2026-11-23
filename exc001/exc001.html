@@ -6,8 +6,20 @@
     <title>Meu perfil</title>
     <style>
 
+        :root{
+            --cor0: #1098F7;
+            --cor1: #E94F37;
+            --cor3: #F6F7EB;
+            --cor4: #393E41;
+        }
+
+        *{/*Todos os elementos do html*/
+        margin: 0px;
+        padding: 0px;
+        }
+
         body{
-            background-color: rgb(255, 165, 76);
+            background-color: var(--cor4);
         }
 
         .TamanhoFotoPerfil{
@@ -18,27 +30,31 @@
         }
 
         .redessociais{
-            width: 50px;
-            height: 50px;
+            width: 35px;
+            height: 35px;
             border-radius: 25px;
+            margin-left: 10px;
         }
 
         .containerprincipal{
+            max-width: 750px;/*(Responsividade) o containerprincipal para de crescer em 750px*/
+            min-height: 400px;/*Mantem a altura minima em 400px*/
             display: flex;
-            border: 1px solid white;
+            border: 1px solid var(--cor3);
             border-radius: 5px;
             overflow: hidden; /*como as divs possuem cores de fundo, para que as cores também respeitem os cantos arredondados*/
-            width: 750px;
-            height: 450px;
         }
 
-        div#pos1{
-            background-color: rgb(255, 132, 0);
-            padding-left: 10px;
+        .ContainerRedesSociais{
+            background-color: var(--cor0);
         }
 
-        div#pos2{
-            background-color: rgb(255, 132, 0);
+        .ContainerDescricao{
+            background-color: var(--cor0);
+        }
+
+        div img {
+            width: 80%;
         }
 
         div > p{
@@ -59,12 +75,16 @@
             text-decoration: underline;
         }
 
+        div > p{
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="containerprincipal">
-        <div id="pos1">
+        <div class="ContainerRedesSociais">
             <img src="imagens/foto perfil.jpg" alt="" class="TamanhoFotoPerfil">
 
             <div>
@@ -74,16 +94,15 @@
                 <img src="imagens/foto perfil.jpg" alt="" class="redessociais">
             </div>
         </div>
-        <div id="pos2">
+        <div class="ContainerDescricao">
             <h1>Vitor Vaz</h1>
-            <p id="teste">
+            <p>
                 <h2>Desenvolvedor Web</h2>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, voluptatibus sunt, nulla iste ut rerum dolores et atque nam deserunt, earum consectetur dicta vitae magni! Voluptate placeat cum commodi dicta.
             </p>
-            <div class="teste">
-                <a href="" class="botoes">Meus projetos</a>
-                <a href="" class="botoes">Entrar em contato</a>
-            </div>
+
+            <a href="" class="botoes">Meus projetos</a>
+            <a href="" class="botoes">Entrar em contato</a>
         </div>
 
         
