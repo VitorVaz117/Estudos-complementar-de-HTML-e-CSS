@@ -7,8 +7,9 @@
     <style>
 
         :root{
-            --cor0: #1098F7;
+            --cor0: #1d679c;
             --cor1: #E94F37;
+            --cor2: #06375a;
             --cor3: #F6F7EB;
             --cor4: #393E41;
         }
@@ -20,15 +21,17 @@
 
         body{
             background-color: var(--cor4);
-            color: black;
+            color: rgb(255, 255, 255);
             font-family: Arial, Helvetica, sans-serif;
         }
 
         .TamanhoFotoPerfil{
             width: 200px;
             height: 200px;
-            border-radius: 150px;
+            border-radius: 50%; /*transforma a imagem em um círculo.*/
+            object-fit: cover; /*A imagem mantém sua proporção e preenche o círculo, cortando apenas o que excede.*/
             margin: 10px;
+            object-position: center 50%;/*Para ajustar a img dentro do circulo*/
         }
 
         .redessociais{
@@ -47,16 +50,15 @@
             border: 1px solid var(--cor3);
             border-radius: 5px; /*para arredondar as imagens e o container principal.*/
             overflow: hidden; /*como as divs possuem cores de fundo, para que as cores também respeitem os cantos arredondados*/
-            background-color: var(--cor0);
-            padding: 10px;
+            background-image: linear-gradient(to right, var(--cor0), var(--cor2));
         }
 
         .ContainerFotoPerfil{
-            background-color: var(--cor0);
+            background-color: transparent;
         }
 
         .ContainerRedesSociais{
-            background-color: var(--cor0);
+            background-color: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -65,28 +67,36 @@
         }
 
         .ContainerDescricao{
-            background-color: var(--cor0);
+            background-color: transparent;
             flex: 1;
             min-width: 300px;
         }
 
-        .botoes{
+        .Botoes{
             border: 3px solid white;
-            padding: 5px;
+            padding: 10px 25px 10px 25px;
+            border-radius: 5px;
+        }
+
+        .PosicionamentoBotoes{
+            display: flex;
+            gap: 45px;
         }
 
         a{
             text-decoration: none;
+            font-weight: bold;
             color: white;
         }
 
         a:hover{
-            text-decoration: underline;
+            background-color: white;
+            color: var(--cor0);
         }
 
         div > p{
-            margin-top: 10px;
-            margin-bottom: 20px;
+            margin: 10px 10px 20px 0px;
+            text-align: justify;
         }
 
         h1{
@@ -95,6 +105,7 @@
 
         h2{
             margin-top: 5px;
+            font-weight: 200;
         }
 
     </style>
@@ -103,7 +114,7 @@
 
     <div class="containerprincipal">
         <div class="ContainerFotoPerfil">
-            <img src="imagens/foto perfil.jpg" alt="" class="TamanhoFotoPerfil">
+            <img src="imagens/foto perfil 2.jpg" alt="" class="TamanhoFotoPerfil">
 
             <div class="ContainerRedesSociais">
                 <img src="imagens/icons8-facebook-novo-50.png" alt="" class="redessociais">
@@ -113,14 +124,17 @@
             </div>
         </div>
         <div class="ContainerDescricao">
-            <h1>Vitor Vaz</h1>
+            <h1>Vitor Vaz Sales</h1>
             <h2>Desenvolvedor Web</h2>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, voluptatibus sunt, nulla iste ut rerum dolores et atque nam deserunt, earum consectetur dicta vitae magni! Voluptate placeat cum commodi dicta.
             </p>
-
-            <a href="" class="botoes">Meus projetos</a>
-            <a href="" class="botoes">Entrar em contato</a>
+            
+            <div class="PosicionamentoBotoes">
+                <a href="" class="Botoes">Meus projetos</a>
+                <a href="" class="Botoes">Entrar em contato</a>
+            </div>
+            
         </div>
 
         
