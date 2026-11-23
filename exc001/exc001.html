@@ -42,10 +42,13 @@
             min-height: 400px;/*Mantem a altura minima em 400px*/
             display: flex; /*para colocar os containers lado a lado.*/
             margin: auto;/*centraliza o conteúdo*/
+            flex-wrap: wrap;
+
             border: 1px solid var(--cor3);
             border-radius: 5px; /*para arredondar as imagens e o container principal.*/
             overflow: hidden; /*como as divs possuem cores de fundo, para que as cores também respeitem os cantos arredondados*/
-
+            background-color: var(--cor0);
+            padding: 10px;
         }
 
         .ContainerFotoPerfil{
@@ -58,10 +61,13 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+            min-width: 250px;
         }
 
         .ContainerDescricao{
             background-color: var(--cor0);
+            flex: 1;
+            min-width: 300px;
         }
 
         .botoes{
