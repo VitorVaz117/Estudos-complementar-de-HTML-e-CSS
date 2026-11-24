@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Model 1</title>
+    <title>Exc003: Box Model 1</title>
 
     <!--
     Objetivo: dominar o Box Model trabalhando com vários elementos na mesma página.
@@ -17,15 +17,20 @@
 
     <style>
         
+        * {
+            box-sizing: border-box; /*Isso ajuda a controlar as dimensões dos elementos, considerando padding e bordas dentro da largura definida.*/
+        }
+
         body{
             background-color: rgb(152, 237, 237);
         }
 
         .containerPrincipal{
-            width: 300px;
+            width: 350px; /*Desafio: Faça o cartão ter 350px de largura.*/
             background-color: white;
             box-shadow: 3px 6px 16px 0px black;
             margin: auto; /*Alinha o container principaç ao centro da tela*/
+            padding-top: 20px; /*Desafio: Adicione 20px de espaçamento interno no cartão, sem aumentar sua largura total.*/
         }
 
         .formatacaoFoto{
@@ -34,10 +39,15 @@
             border-radius: 50%; /*Transforma a imagem em um círculo*/
             border: 2px solid black;
             object-fit: cover; /*A imagem mantém sua proporção e preenche o círculo, cortando apenas o que excede.*/
+           
+            /*Melhoria 1
             margin-top: 30px;
             margin-left: 100px;
             margin-right: 100px;
             margin-bottom: 10px;
+            */
+            display: block;
+            margin: 20px auto 10px; /*ANEXO A - Desafio: Centralize a imagem sem utilizar margens laterais fixas.*/
         }
 
         h1,p{
@@ -60,7 +70,7 @@
             text-decoration: none;
             font-size: 10px;
             padding: 5px 20px;
-            gap: 10px;
+            /*gap: 10px;*/ /*ANEXO B*/
         }
 
         .btEsquerdo{
@@ -98,3 +108,5 @@
     </div>
 </body>
 </html>
+
+
