@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model 1</title>
+
+    <!--
+    Objetivo: dominar o Box Model trabalhando com vários elementos na mesma página.
+
+    1. Não utilize position: absolute.
+    2. Não utilize transform para corrigir posicionamento.
+    3. Tente resolver utilizando apenas Box Model e Flexbox.
+    4. Utilize box-sizing: border-box quando achar necessário.
+    Regras dos exercícios
+    -->
+
+    <style>
+        
+        body{
+            background-color: rgb(152, 237, 237);
+        }
+
+        .containerPrincipal{
+            width: 300px;
+            background-color: white;
+            box-shadow: 3px 6px 16px 0px black;
+            margin: auto; /*Alinha o container principaç ao centro da tela*/
+        }
+
+        .formatacaoFoto{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /*Transforma a imagem em um círculo*/
+            border: 2px solid black;
+            object-fit: cover; /*A imagem mantém sua proporção e preenche o círculo, cortando apenas o que excede.*/
+            margin-top: 30px;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-bottom: 10px;
+        }
+
+        h1,p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+         h1{
+            font-size: 45px;
+            text-align: center;
+            margin: 0px;
+        }
+
+        p{
+            font-size: 15px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 10px;
+            padding: 5px 20px;
+            gap: 10px;
+        }
+
+        .btEsquerdo{
+            background-color: rgb(0, 98, 255);
+            color: white;
+            border-radius: 4px;
+        }
+
+        .brDireito{
+            border: 1px solid rgb(0, 98, 255);
+            color:rgb(0, 98, 255);
+            border-radius: 4px;
+        }
+
+        .containerBotoes{
+            display: flex; /*Flexbox*/
+            gap: 20px; /*Espaçamento entre os botoes*/
+            justify-content: center; /*alinha o conteúdo ao centro do container*/
+            padding-top: 7px; /*Distância superior dos botoes do container*/
+            padding-bottom: 20px; /*Distância inferior dos botoes do container*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containerPrincipal">
+        <img src="imagens/foto perfil 2.jpg" alt="" class="formatacaoFoto">
+        <h1>Vitor</h1>
+        <p>Web Developer</p>
+        <p>Location City, Country</p>
+        <div class="containerBotoes">
+            <a href="#" class="btEsquerdo">Follow</a>
+            <a href="#" class="brDireito">Message</a>    
+        </div>
+    </div>
+</body>
+</html>
