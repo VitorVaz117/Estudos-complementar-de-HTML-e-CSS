@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exc004: Box Model 2</title>
+
+    <!--
+    Objetivo: dominar o Box Model trabalhando com vários elementos na mesma página.
+
+    Regras dos exercícios
+    
+    1. Não utilize position: absolute.
+    2. Não utilize transform para corrigir posicionamento.
+    3. Tente resolver utilizando apenas Box Model e Flexbox.
+    4. Utilize box-sizing: border-box quando achar necessário.
+    -->
+    
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        header{
+            display: flex;
+            justify-content: right; /*Alinha o conteúdo a direita*/
+            border-bottom: 1px solid rgb(104, 104, 104);
+            margin: -10px;
+            padding: 10px;
+        }
+
+        .iconesConfiguracoes{
+            color: black;
+            align-content: center; /*Alinha o icone ao centro na vertical*/
+            margin-right: 10px;
+            font-size: 25px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            font-size: 25px;
+        }
+
+        img{
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .posicaoNome{
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">Home</a>
+        <a href="#">Models</a>
+        <a href="#">Shop</a>
+        <a href="#">Porsche world</a>
+        <i class="fa-solid fa-magnifying-glass iconesConfiguracoes"></i>
+    </header>
+    <main>
+        <img src="imagens/carro2.webp" alt="">
+        <div class="posicaoNome">
+            <h1>911 GT3 RS</h1>
+            <p>FROM 184 550 $</p>
+        </div>
+        
+    </main>
+
+</body>
+</html>
