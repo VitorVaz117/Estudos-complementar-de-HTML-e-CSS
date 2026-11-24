@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="fontawesome/svgs/brands/11ty.svg" rel="stylesheet"/>
+    <link href="fontawesomeweb/css/all.css" rel="stylesheet"/>
     <style>
         *{/*Todos os elementos do HTML*/
             margin: 0px;
@@ -15,11 +15,34 @@
             background-color: black;
             color: white;
             padding: 5px 0px 5px 3px;
+            display: flex;
+            justify-content: space-between; /* título à esquerda, ícones à direita */
+            align-items: center;            /* alinha verticalmente */
         }
 
         i {
-            color: rgb(0, 0, 0);
-            font-size: 40px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .PosicaoIcones{
+            display: flex;
+            gap: 10px; /* espaço entre os ícones */
+        }
+
+        main{
+            background-color: darkolivegreen;
+            height: 100vw;
+            width: 100vw;
+        }
+
+        .containerA{
+
+            color: white;
+        }
+
+        .fonteMaiuscula{
+            text-transform: uppercase;
         }
 
     </style>
@@ -28,15 +51,22 @@
     <header>
         <h1>Jeep</h1>
         <img src="" alt="">
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-solid fa-file"></i>
+        
+        <div class="PosicaoIcones">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
     </header>
-    <p>
-        SERVIÇOS JEEP<br>
-        Seu Jeep bem cuidado<br>
-        Soluções e profissionais preparados para ajudar você.
-        <i class="fa-solid fa-file"></i>
-    </p>
+    <main>
+        <div containerA>
+            <p class="fonteMaiuscula">Serviços Jeep</p>
+            <h1 class="fonteMaiuscula">Seu Jeep bem cuidado</h1>
+            <p>Soluções e profissionais preparados para ajudar você.</p>
+        </div>
+        
+    </main>
+    
 
 </body>
 </html>
